@@ -1,0 +1,16 @@
+.b1{
+    position: absolute;
+    -webkit-border-radius: 5px;
+    width: 20%;
+    height: 10%;
+    top:70%;
+    margin: 0 auto;
+    background: #1d7eb8;
+    text-align: center;
+    font-size: 5px;
+    opacity: 0;
+    border: 0;
+    padding: 0;
+    z-index: 50;
+    cursor: pointer;
+}

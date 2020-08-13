@@ -1,0 +1,107 @@
+#item-0{
+    transition: all 1s linear;
+}
+.c-1{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    height: 60%;
+    width: 60%;
+    background: transparent;
+    z-index: 10;
+    overflow: hidden;
+}
+.center_a1 div:nth-child(2){
+    background-image: url("../images/bei1.png");
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+}
+.c-1 span:nth-child(1){
+    -webkit-border-radius: 30px;
+    position: absolute;
+    top: 10%;
+    left: -55%;
+    width: 50%;
+    height: 50%;
+    background: rgba(181,181,181,0.5);
+    box-shadow: 4px 4px 5px rgba(150,150,150,1);
+    z-index: 20;
+}
+.c-1 span:nth-child(1) h5{
+    text-align: center;
+    font-size: 30px;
+    font-family: 楷体, Times, serif;
+    line-height: 100px;
+    opacity: 0;
+    cursor: default;
+}
+.c-1 span:nth-child(2){
+    -webkit-border-radius: 30px;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    width: 50%;
+    height: 50%;
+    background: rgba(181,181,181,0.5);
+    box-shadow: 4px 4px 5px rgba(150,150,150,1);
+    z-index: 20;
+}
+.c-1 span:nth-child(2) h5{
+    text-align: center;
+    font-size: 30px;
+    font-family: 楷体, Times, serif;
+    margin-top: 100px;
+    opacity: 0;
+    /******/
+    word-break: break-all;
+    overflow: hidden;
+    cursor: default;
+}
+/*
+#item-0:hover .c-1 span:nth-child(1){
+    animation: l-go 1s forwards;
+}
+#item-0:hover .c-1 span:nth-child(2){
+    animation: r-go 1s forwards;
+}
+#item-0:hover .c-1 span:nth-child(1) h5{
+    animation: op-trans 1s 1s forwards;
+}
+#item-0:hover .c-1 span:nth-child(2) h5{
+    animation: op-trans 1s 1s forwards;
+}
+*/
+
+@-webkit-keyframes l-go {
+    from{
+        left: -50%;
+    }
+    to{
+        left: 20%;
+    }
+}
+@-webkit-keyframes r-go {
+    from{
+        left: 100%;
+    }
+    to{
+       left: 30%;
+    }
+}
+@-webkit-keyframes rel-go {
+    from{
+        left: 20%;
+    }
+    to{
+        left: -50%;
+    }
+}
+@-webkit-keyframes rer-go {
+    from{
+        left: 100%;
+    }
+    to{
+        left: 30%;
+    }
+}

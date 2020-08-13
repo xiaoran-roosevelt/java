@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    font-size: 126px;
+    display: -webkit-box;
+    /*Safari*/
+    display: -moz-box;
+    /*Firefox*/
+    display: -ms-flexbox;
+    /*IE*/
+    display: -webkit-flex;
+    /*Chrome*/
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    z-index: -1;
+}
+/*page里面的背景页面*/
+.center_a1{
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    height: 70%;
+    width: 80%;
+    background: rgba(145,145,145,0.7) ;
+    overflow: hidden;
+    box-shadow: 4px 4px 5px grey;
+}
+.center_a2{
+    position: absolute;
+    left: 10%;
+    top: 115%;
+    height: 70%;
+    width: 80%;
+    background: rgba(145,145,145,0.7) ;
+    overflow: hidden;
+    box-shadow: 4px 4px 5px grey;
+}
+
+.center_a3{
+    position: absolute;
+    left: 10%;
+    top: 215%;
+    height: 70%;
+    width: 80%;
+    background: rgba(145,145,145,0.7) ;
+    overflow: hidden;
+    box-shadow: 4px 4px 5px grey;
+}
+
+@-webkit-keyframes trans2 {
+    0%{
+        height: 0;
+    }
+    50%{
+        height: 30%;
+        width: 30%
+    }
+    75%{
+        height: 30%;
+        width: 70%;
+        opacity: 1;
+    }
+    100%{
+        height: 30%;
+        width: 70%;
+        opacity: 0;
+    }
+}
+@-webkit-keyframes op-trans {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@-webkit-keyframes trans {
+    0%{
+        left: -50%;
+    }
+    50%{
+        left: 70%;
+        width: 50%;
+    }
+    100%{
+        left: 70%;
+        width: 0;
+    }
+}
+
+
+.font-box{
+    position: absolute;
+    height: 30%;
+    width: 70%;
+    left: 15%;
+    top:70%;
+    font-size: 35px;
+    cursor: default;
+    line-height:30px;
+    display: block;
+    float: left;
+    /*自动换行*/
+    text-align: center;
+    word-break: break-all;
+    overflow: hidden;
+    opacity: 0;
+}

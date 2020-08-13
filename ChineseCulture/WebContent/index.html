@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>文化长廊</title>
+    <!--1              -->
+    <!--script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script-->
+    <!--script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-12324069-1"></script-->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-12324069-1');
+    </script>
+    <!--1              -->
+    <!--2              -->
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- bootstrap-css -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!--// bootstrap-css -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!--// css -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <!--2              -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main-animation.css">
+    <link rel="stylesheet" type="text/css" href="css/contains.css">
+    <link rel="stylesheet" type="text/css" href="css/another.css">
+    <link rel="stylesheet" type="text/css" href="css/i-2.css">
+    <link rel="stylesheet" type="text/css" href="css/i-1.css">
+    <link rel="stylesheet" type="text/css" href="css/c-1.css">
+    <link rel="stylesheet" type="text/css" href="css/my-another-add.css">
+    <link rel="stylesheet" type="text/css" href="css/load.css">
+    <script type="text/javascript" src="js/jq.js"></script>
+    <script type="text/javascript" src="js/c_1.js"></script>
+    <!--//引用方法-->
+    <script>
+        $(function () {
+            $('#mao').screen();
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#item-0").mouseover(function () {
+                $("#sp1").animate({
+                    left : "20%",
+                },1000);
+                $("#sp2").animate({
+                    left : "30%",
+                },1000)
+                $("#sp1 h5").delay(1000).animate({
+                    opacity : "1",
+                },1500);
+                $("#sp2 h5").delay(1000).animate({
+                    opacity : "1",
+                },1500);
+            })
+
+        });
+    </script>
+    <script>
+        document.onreadystatechange = subSomething;
+        function subSomething() {
+            //当页面加载状态
+            if (document.readyState == "complete") {
+                //延迟一秒关闭loading
+                $('#sys-loading').delay(1300).hide(0);
+                $('.spinner').delay(1300).fadeOut('slow');
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+<div id="particles-js"><canvas class="particles-js-canvas-el" width="1592" height="1524" style="width: 100%; height: 100%;"></canvas></div>
+<!--  
+<div id="sys-loading" class="">
+    <div class="spinner">
+        <div class="loader-inner line-scale-pulse-out-rapid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <h5 class="spinner" style="top: 55%">Now loading.</h5>
+</div>
+-->
+<!-- header nav -->
+<div class="header-nav">
+    <div class="container">
+        <div class="header">
+            <span class="head-logo"><a href="index.html"><img src="images/火锅1.png" alt="" width="115" height="73" /></a></span>
+            <div class="head-logo"></div>
+            <h5>文化长廊</h5>
+            <div class="header-info-right">
+                <div class="cbp-spmenu">
+                    <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2"><div id="navcolor"><a id="pagefont" href="index.html">文化</a> <a id="pagefont2" href="page-2/main.html"> 长廊</a><a id="pagefont3" href="page-3/Strongly%20Typed%20by%20HTML5%20UP.html">观赏</a> <!--a id="pagefont4 href="clients.html" >页面4</a--></div></nav>
+                    <!--script-nav -->
+                    <script>
+                        $("span.menu").click(function(){
+                            $("ul.navigatoin").slideToggle("300" , function(){
+                            });
+                        });
+                    </script>
+                    <div class="clearfix"> </div>
+                    <!-- /script-nav -->
+                    <div class="main">
+                        <section class="buttonset">
+                            <button id="showRightPush"><img src="images/menu.png" /></button>
+                        </section>
+                    </div>
+
+                    <script src="js/classie.js"></script>
+                    <script>
+                        var	menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+                            showRightPush = document.getElementById( 'showRightPush' ),
+                            body = document.body;
+
+                        showRightPush.onclick = function() {
+                            classie.toggle( this, 'active' );
+                            classie.toggle( body, 'cbp-spmenu-push-toleft' );
+                            classie.toggle( menuRight, 'cbp-spmenu-open' );
+                            disableOther( 'showRightPush' );
+                        };
+                    </script>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--//header nav-->
+
+
+<div id="mao">
+    <div class="page" id="item-0" style="background-color: transparent;">
+
+        <div class="c-1">
+            <span id = "sp1"><h5>文化长廊</h5></span>
+            <span id = "sp2"><h5>中华传统文化之美</h5></span>
+        </div>
+        <div class="center_a1">
+            <div class="out"></div>
+            <!--div class="title1"><h3>Title1</h3></div>
+            <div class="title2"></div>
+            <div class="font-box">contains<br>ContainS<br>Contains</div-->
+            <div></div>
+        </div>
+        <!--button class="b1">Learn More</button-->
+    </div>
+    <div class="page" id="item-1" style="background-color: transparent;">
+        <!-- <div class="center_a2">
+            -
+             <div class="title1"><span></span><h5>Title1</h5></div>
+             <div class="title2"><span></span><h5>Title2</h5></div>
+             <div class="font-box">contains<br>ContainS<br>Contains</div>
+        </div>-->
+        <div class="center_a2">
+            <div class="out-1"></div>
+            <div class="out-1"></div>
+            <div>
+                <span></span>
+            </div>
+            <div></div>
+            <h5>传统文化（Traditional culture）就是文明演化而汇集成的一种反映民族特质和风貌的文化，是各民族历史上各种思想文化、观念形态的总体表现。其内容当为历代存在过的种种物质的、制度的和精神的文化实体和文化意识。它是对应于当代文化和外来文化的一种称谓。</h5>
+        </div>
+        <!--button>Learn More</--button-->
+    </div>
+    <div class="page" id="item-2">
+        <div class="center_a3">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <h5>想知道更多？点击这里！</h5>
+            <button onclick="window.location.href = 'page-2/main.html'">Learn More</button>
+        </div>
+        <div class="im3"></div>
+    </div>
+    <!-- <div class="page" id="item-3"></div>-->
+    <!-- <div class="page" id="item-4" style="background-color: teal;"></div>
+    <div class="page" id="item-5" style="background: wheat;"></div>
+    <div class="page" id="item-6" style="background-color: yellowgreen;"></div>-->
+
+</div>
+</body>
+<!--  
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+-->
+</html>
