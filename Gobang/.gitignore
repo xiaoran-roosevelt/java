@@ -1,0 +1,5 @@
+*.class
+*.xml
+*.iml
+out/production/Gobang/source/record.txt
+.idea/.gitignore
