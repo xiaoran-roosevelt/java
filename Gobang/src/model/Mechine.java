@@ -1,4 +1,4 @@
-package main;
+package model;
 
 public class Mechine{
 	   private int[][]chessboard=null;
@@ -54,7 +54,7 @@ public class Mechine{
             if (flagbreak) {
 				
 			}else {
-				if (score_human_max > score_machine_max) { //找到最好的那个点，进行赋值
+				if (score_human_max > score_machine_max) { //???????????????и??
           			chessboard[set_human_i][set_human_j] = machineChess;
           			in[0]=set_human_i;
       	        	in[1]=set_human_j;
@@ -86,7 +86,7 @@ public class Mechine{
        			score_live_three += 500;
        		}
        	}
-       	//水平方向
+       	//??????
        	if (chessboard[i][j + 1] == num && chessboard[i][j + 2] == num) {
        		if (chessboard[i][j - 1] == 0 && chessboard[i][j + 3] == 0) {
        			score_live_three += 500;
@@ -102,7 +102,7 @@ public class Mechine{
        			score_live_three += 500;
        		}
        	}
-       	//斜方向一
+       	//б?????
        	if (chessboard[i + 1][j + 1] == num && chessboard[i + 1][j + 2] == num) {
        		if (chessboard[i - 1][j - 1] == 0 && chessboard[i + 3][j + 3] == 0) {
        			score_live_three += 500;
@@ -118,7 +118,7 @@ public class Mechine{
        			score_live_three += 500;
        		}
        	}
-       	//斜方向二
+       	//б?????
        	if (chessboard[i + 1][j - 1] == num && chessboard[i + 1][j - 2] == num) {
        		if (chessboard[i - 1][j + 1] == 0 && chessboard[i + 3][j - 3] == 0) {
        			score_live_three += 500;
@@ -140,7 +140,7 @@ public class Mechine{
       private int Assess_live_rush_four( int i, int j, int num)
        {
        	int score_live_rush_four = 0;
-       		//垂直方向
+       		//???????
        	if (chessboard[i + 1][j] == num && chessboard[i + 2][j] == num && chessboard[i + 3][j] == num) {
        		if (chessboard[i - 1][j] == 0 && chessboard[i + 4][j] == 0) {
        			score_live_rush_four += 1000;
@@ -173,7 +173,7 @@ public class Mechine{
        			score_live_rush_four += 500;
        		}
        	}
-       	//水平方向
+       	//??????
        	if (chessboard[i][j + 1] == num && chessboard[i][j + 2] == num && chessboard[i][j + 3] == num) {
        		if (chessboard[i][j - 1] == 0 && chessboard[i][j + 4] == 0) {
        			score_live_rush_four += 1000;
@@ -206,7 +206,7 @@ public class Mechine{
        			score_live_rush_four += 500;
        		}
        	}
-       	//斜方向一
+       	//б?????
        	if (chessboard[i + 1][j + 1] == num && chessboard[i + 2][j + 2] == num && chessboard[i + 3][j + 3] == num) {
        		if (chessboard[i - 1][j - 1] == 0 && chessboard[i + 4][j + 4] == 0) {
        			score_live_rush_four += 1000;
@@ -239,7 +239,7 @@ public class Mechine{
        			score_live_rush_four += 500;
        		}
        	}
-       	//斜方向二
+       	//б?????
        	if (chessboard[i + 1][j - 1] == num && chessboard[i + 2][j - 2] == num && chessboard[i + 3][j - 3] == num) {
        		if (chessboard[i - 1][j + 1] == 0 && chessboard[i + 4][j - 4] == 0) {
        			score_live_rush_four += 1000;
@@ -278,7 +278,7 @@ public class Mechine{
       private int Assess_live_two( int i, int j, int num)
        {
        	int score_live_two = 0;
-       	//水平方向
+       	//??????
        	if (chessboard[i][j + 1] == num && chessboard[i][j + 2] == 0 && chessboard[i][j - 1] == 0) {
        		if (chessboard[i][j + 3] == 0 || chessboard[i][j - 2] == 0) {
        			score_live_two += 200;
@@ -289,7 +289,7 @@ public class Mechine{
        			score_live_two += 200;
        		}
        	}
-       	//垂直方向
+       	//???????
        	if (chessboard[i + 1][j] == num && chessboard[i + 2][j] == 0 && chessboard[i - 1][j] == 0) {
        		if (chessboard[i + 3][j] == 0 || chessboard[i - 2][j] == 0) {
        			score_live_two += 200;
@@ -300,7 +300,7 @@ public class Mechine{
        			score_live_two += 200;
        		}
        	}
-       	//斜方向一
+       	//б?????
        	if (chessboard[i + 1][j + 1] == num && chessboard[i + 2][j + 2] == 0 && chessboard[i - 1][j - 1] == 0) {
        		if (chessboard[i + 3][j + 3] == 0 || chessboard[i - 2][j - 2] == 0) {
        			score_live_two += 200;
@@ -311,7 +311,7 @@ public class Mechine{
        			score_live_two += 200;
        		}
        	}
-       	//斜方向二
+       	//б?????
        	if (chessboard[i + 1][j - 1] == num && chessboard[i + 2][j - 2] == 0 && chessboard[i - 1][j + 1] == 0) {
        		if (chessboard[i + 3][j - 3] == 0 || chessboard[i - 2][j + 2] == 0) {
        			score_live_two += 200;
@@ -344,7 +344,7 @@ public class Mechine{
 			else if (chessboard[i + 1][j] == num && chessboard[i + 2][j] == num && chessboard[i + 3][j] == num && chessboard[i - 1][j] == num) {
 				flag_win = num;
 			}
-			//竖直方向
+			//???????
 			if (chessboard[i][j + 1] == num && chessboard[i][j + 2] == num && chessboard[i][j + 3] == num && chessboard[i][j + 4] == num) {
 				flag_win = num;
 			}
@@ -360,7 +360,7 @@ public class Mechine{
 			else if (chessboard[i][j + 1] == num && chessboard[i][j + 2] == num && chessboard[i][j + 3] == num && chessboard[i][j - 1] == num) {
 				flag_win = num;
 			}
-			//斜方向一
+			//б?????
 			if (chessboard[i + 1][j + 1] == num && chessboard[i + 2][j + 2] == num && chessboard[i + 3][j + 3] == num && chessboard[i + 4][j + 4] == num) {
 				flag_win = num;
 			}
@@ -376,7 +376,7 @@ public class Mechine{
 			else if (chessboard[i + 1][j + 1] == num && chessboard[i + 2][j + 2] == num && chessboard[i + 3][j + 3] == num && chessboard[i - 1][j - 1] == num) {
 				flag_win = num;
 			}
-			//斜方向二
+			//б?????
 			if (chessboard[i + 1][j - 1] == num && chessboard[i + 2][j - 2] == num && chessboard[i + 3][j - 3] == num && chessboard[i + 4][j - 4] == num) {
 				flag_win = num;
 			}
