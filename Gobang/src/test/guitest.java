@@ -1,61 +1,108 @@
 package test;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
+
+import java.awt.Color;
+
+import java.awt.Dimension;
+
+import java.awt.event.MouseAdapter;
+
+import java.awt.event.MouseEvent;
+
+
+
+import javax.swing.JFrame;
+
+import javax.swing.JPanel;
+
+import javax.swing.SwingUtilities;
+
+
 
 public class guitest extends JFrame {
-    private static final long serialVersionUID = 1L;
+
+
+
+    private JPanel panel1 = new JPanel();
+
+
+
+    private JPanel panel2 = new JPanel();
+
+
 
     public guitest() {
-        // 普通按钮控件
-        JFrame jf = new JFrame("main");
-        Toolkit tk = this.getToolkit();// 得到窗口工具条
-        int width = 650;
-        int height = 500;
-        Dimension dm = tk.getScreenSize();
-        jf.setSize(300, 200);// 设置程序的大小
-        jf.setLocation((int) (dm.getWidth() - width) / 2,
-                (int) (dm.getHeight() - height) / 2);// 显示在屏幕中央
-        jf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        jf.setVisible(true);
-        JPanel contentPane = new JPanel();
-        jf.setContentPane(contentPane);
 
-        // 创建两个按钮，并且将按钮添加到内容面板中
+        this.panel1.setPreferredSize(new Dimension(150, 150));
 
-        JButton another = new JButton("另起页面");
+        this.panel1.setBackground(Color.RED);
 
-        JButton close = new JButton("关闭");
+        this.panel2.setPreferredSize(new Dimension(50, 50));
 
-        contentPane.add(another);
+        this.panel2.setBackground(Color.BLUE);
 
-        contentPane.add(close);
+        this.panel1.add(this.panel2);
 
-        another.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // TODO Auto-generated method stub
-                new exit();
-            }
-        });
+        this.getContentPane().add(this.panel1);
 
-        close.addActionListener(new ActionListener() {
+
+
+        this.panel1.addMouseListener(new MouseAdapter() {
 
             @Override
-            public void actionPerformed(ActionEvent e) {
-                // TODO Auto-generated method stub
-//                System.exit(0);
-                jf.dispose();
+
+            public void mousePressed(MouseEvent e) {
+
+                super.mousePressed(e);
+
+                System.out.println("panel1 mousePressed");
+
+                MouseEvent e1 = SwingUtilities.convertMouseEvent(panel1, e, panel2);
+
+                panel2.dispatchEvent(e1);
+
             }
+
         });
+
+        this.panel2.addMouseListener(new MouseAdapter() {
+
+            @Override
+
+            public void mousePressed(MouseEvent e) {
+
+                super.mousePressed(e);
+
+                System.out.println("panel2 mousePressed");
+
+            }
+
+        });
+
     }
 
-    public static void main(String[] args)
 
-    {
-        new guitest();
+
+    /**
+
+     * @param args
+
+     */
+
+    public static void main(String[] args) {
+
+        guitest te = new guitest();
+
+        te.setVisible(true);
+
+        te.pack();
+
+        te.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
+
+
+
 }
+
